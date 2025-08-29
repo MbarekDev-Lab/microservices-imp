@@ -27,7 +27,7 @@ class RestTemplateConfiguration {
 @RestController
 public class CurrencyConversionController {
 	
-	private Logger logger = LoggerFactory.getLogger(CurrencyConversionController.class);
+	private final Logger logger = LoggerFactory.getLogger(CurrencyConversionController.class);
 	
 	@Autowired
 	private CurrencyExchangeProxy proxy;

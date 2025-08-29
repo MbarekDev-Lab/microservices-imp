@@ -3,28 +3,27 @@ package com.in28minutes.microservices.currencyconversionservice;
 import java.math.BigDecimal;
 
 public class CurrencyConversion {
-	private Long id;
+	private BigDecimal totalCalculatedAmount;
+	private BigDecimal conversionMultiple;
+	private BigDecimal quantity;
+	private String environment;
 	private String from;
 	private String to;
-	private BigDecimal quantity;
-	private BigDecimal conversionMultiple;
-	private BigDecimal totalCalculatedAmount;
-	private String environment;
+	private Long id;
 
 	public CurrencyConversion() {
-		
 	}
 	
-	public CurrencyConversion(Long id, String from, String to, BigDecimal quantity, BigDecimal conversionMultiple, 
-			BigDecimal totalCalculatedAmount, String environment) {
+	public CurrencyConversion(Long id, String from, String to, BigDecimal quantity,
+							  BigDecimal conversionMultiple, BigDecimal totalCalculatedAmount, String environment) {
 		super();
-		this.id = id;
-		this.from = from;
-		this.to = to;
-		this.conversionMultiple = conversionMultiple;
-		this.quantity = quantity;
 		this.totalCalculatedAmount = totalCalculatedAmount;
+		this.conversionMultiple = conversionMultiple;
 		this.environment = environment;
+		this.quantity = quantity;
+		this.from = from;
+		this.id = id;
+		this.to = to;
 	}
 
 	public Long getId() {
